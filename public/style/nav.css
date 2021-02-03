@@ -1,0 +1,37 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_bar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-family: 'Arial';
+    font-style: normal;
+    justify-content: space-around;
+    z-index: 100;
+    align-items: center;
+    height: 42px;
+    font-size: 18px;
+    background-color: white;
+}
+
+.nav_bar a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav_bar :hover{
+    color: #51a7cf;
+}
+
+
+.login-form{
+    margin-top: 100px;
+    margin-bottom: 100vh;
+}

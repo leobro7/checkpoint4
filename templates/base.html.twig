@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
 
-        {% block javascripts %}{% endblock %}
-    </head>
+    {% block stylesheets %}
+        <link href="{{ 'style/index.css' }}" rel="stylesheet"/>
+        <link href="{{ 'style/nav.css' }}" rel="stylesheet">
+    {% endblock %}
+    {% block headerTitle %}
+<header>
+    {% include "_nav.html.twig" %}
+</header>
+{% endblock %}
+</head>
     <body>
-        {% block body %}{% endblock %}
+    {% block body %}
+    
+    {% endblock %}
+
+    {% block javascripts %}{% endblock %}
+
     </body>
 </html>
+

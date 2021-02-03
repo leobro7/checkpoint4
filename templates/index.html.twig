@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <link href="{{ 'style/index.css' }}" rel="stylesheet"/>
+  <link href="{{ 'style/nav.css' }}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Mon Portfolio{% endblock %}
+{% block headerTitle %}
+<header>
+    {% include "_nav.html.twig" %}
+</header>
+{% endblock %}
+
+
+{% block body %}
+
+  <div class="portfolio-body">
+    <ul class="cards">
+      <li class="cards_item">
+        <div class="card">
+          
+          <div class="card_content">
+            <div class="card_image"><img class="card-img" src="/images/photo-profil.jpg"></div>
+            <h2 class="card_title">A propos de moi</h2>
+            <p class="card_text">
+                Je suis un développeur junior spécialisé Back-end en formation à la Wild Code School de Tours.            
+            </p>
+            <button class="btn card_btn" onclick=window.location.href="{{ '/profil.html.twig' }}">Moi</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_content">
+            <h2 class="card_title">Mon actualité</h2>
+            <p class="card_text">
+                Je suis à la recherche d'un stage de développeur web et web mobile pour faire suite à ma formation du même nom réalisée à la Wild Code School à Tours.
+                Je souhaite poursuivre ma carrière professionnelle dans le domaine passionant de la Tech et je suis disponible à partir du 15 février 2021.
+            </p>
+            <button class="btn card_btn" onclick=window.location.href="{{ '/actu.html.twig' }}">Mon actu</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_content">
+            <h2 class="card_title">Projet 1</h2>
+            <p class="card_text">
+                Site de tourisme sur la ville de Tours<br>
+                - HTML / CSS / Javascript
+            </p>
+            <button class="btn card_btn" onclick=window.location.href="{{ '/projects.html.twig' }}">Mes projets</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_content">
+            <h2 class="card_title">Projet 2</h2>
+            <p class="card_text">
+                Site d'entraide et services entre voisins
+                - Base de donnée MySQL / Twig
+                - Système MVC / Méthodes agiles SCRUM            
+            </p>
+            <button class="btn card_btn" onclick=window.location.href="{{ '/projects.html.twig' }}">Mes projets</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_content">
+            <h2 class="card_title">Projet 3</h2>
+            <p class="card_text">
+                Site d'un restaurant/traiteur à Tours
+                - PHP/Symfony            
+            </p>
+            <button class="btn card_btn" onclick=window.location.href="{{ '/projects.html.twig' }}">Mes projets</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_content">
+            <h2 class="card_title">Formations</h2>
+            <p class="card_text">
+                Wild Code School de Tours<br>
+                Développeur web et web mobile Septembre 2020-Février 2021<br>
+                
+                Université François Rabelais de Tours<br>
+                L1 Mathématiques et Informatique 2016-2017<br>
+                
+                Lycée Jacques de Vaucanson, Tours<br>
+                BTS Conception et Industrialisation Microtechnique 2013-2015<br>
+                
+                BAC STI2D Sciences et Technologies de l'Industrie et du Développement Durable 2011-2013
+            </p>
+            <button class="btn card_btn" onclick=window.location.href="{{ '/formations.html.twig' }}">Mes formations</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_content">
+            <h2 class="card_title">Me contacter</h2>
+            <p class="card_text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi odit fugit commodi! Voluptas nobis pariatur placeat obcaecati. khdkhckhdkbckdsbhckjh.
+            </p>
+            <button class="btn card_btn" onclick=window.location.href="{{ '/contact.html.twig' }}">Me contacter</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+{% endblock %}

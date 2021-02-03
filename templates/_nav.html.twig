@@ -1,0 +1,16 @@
+<nav class="nav_bar">
+    <a href="#profil">A propos</a>
+    <a href="#actu">Actu</a>
+    <a href="#projects">Projets</a>
+    <a href="#formations">Formations</a>
+    <a href="#contact">Me contacter</a>
+   {#{% if app.user %}
+
+        <a href="{{ path('app_logout') }}">Déconnexion</a>
+
+    {% else %}
+
+        <a href="{{ path('app_login') }}"> Connexion</a>
+
+    {% endif %} #}
+</nav>
