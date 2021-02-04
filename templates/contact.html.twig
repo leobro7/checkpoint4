@@ -1,21 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-  <link href="{{ 'style/index.css' }}" rel="stylesheet"/>
-  <link href="{{ 'style/nav.css' }}" rel="stylesheet">
+  <link href="{{ 'style/contact.css' }}" rel="stylesheet"/>
+  <link href="{{ 'style/nav.css' }}" rel="stylesheet"/>
 {% endblock %}
 
 {% block main %}
-<p class="card_text">
-    Wild Code School de Tours<br>
-    Développeur web et web mobile Septembre 2020-Février 2021<br>
+    <h1 class="card_title">
+        Me contacter!
+    </h1>
+
+    {{ form_start(formContact) }}
+
+    <div class="form-group">
+        <label for="">Nom: </label>
+        {{ form_widget(formContact.name) }}
+    </div>
+    <div class="form-group">
+        <label for="">Téléphone: </label>
+        {{ form_widget(formContact.tel) }}
+    </div>
+    <div class="form-group">
+        <label for="">Email: </label>
+        {{ form_widget(formContact.email) }}
+    </div>
+    <div class="form-group">
+        <label for="">Message: </label>
+        {{ form_widget(formContact.message) }}
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Envoyer</button>
+    </div>
+
+    {{ form_end(formContact) }}
     
-    Université François Rabelais de Tours<br>
-    L1 Mathématiques et Informatique 2016-2017<br>
-    
-    Lycée Jacques de Vaucanson, Tours<br>
-    BTS Conception et Industrialisation Microtechnique 2013-2015<br>
-    
-    BAC STI2D Sciences et Technologies de l'Industrie et du Développement Durable 2011-2013
-</p>
 {% endblock %}

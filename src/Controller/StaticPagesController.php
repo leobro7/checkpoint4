@@ -5,6 +5,12 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Contact;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+
 
 /**
  * This class is used to display all static views
@@ -27,9 +33,42 @@ class StaticPagesController extends AbstractController
      * @return Response
      * @Route("/contact", name="contact")
      */
-    public function indexForm(): Response
+    public function indexContact(): Response
     {
-        return $this->render('/contact.html.twig');
+        $contact = new Contact();
+
+        $form = $this->createFormBuilder($contact)
+                     ->add('name' , TextType::class, [
+                        'attr' => [
+                            'placeholder' => "Dumoulin",
+                            'class' => 'form-control'
+                        ]
+                     ])
+                     ->add('tel' , TelType::class, [
+                         'attr' => [
+                             'placeholder' => "06 00 00 00 00",
+                             'class' => 'form-control'
+                         ]
+                     ])
+                     ->add('email' , EmailType::class, [
+                        'attr' => [
+                            'placeholder' => "dumoulin@gmail.com",
+                            'class' => 'form-control'
+                        ]
+                    ])
+                     ->add('message' , TextareaType::class, [
+                        'attr' => [
+                            'placeholder' => "écrivez votre message...",
+                            'class' => 'form-control'
+                        ]
+                    ])
+                     ->getForm();
+
+        
+        return $this->render('/contact.html.twig',[
+            'formContact' => $form->createView()
+        ]);
+
     }
 }
 
