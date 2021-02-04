@@ -17,8 +17,19 @@ class StaticPagesController extends AbstractController
      * @return Response
      * @Route("/", name="index")
      */
-    public function index(): Response
+    public function indexHome(): Response
     {
         return $this->render('/index.html.twig');
     }
+
+    /**
+     * This method is used to display the contact page
+     * @return Response
+     * @Route("/contact", name="contact")
+     */
+    public function indexForm(): Response
+    {
+        return $this->render('/contact.html.twig');
+    }
 }
+
